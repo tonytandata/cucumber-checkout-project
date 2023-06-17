@@ -1,12 +1,14 @@
 package step_definitions;
 
+import implementation.Checkout;
 import io.cucumber.java.en.*;
 import io.cucumber.java.PendingException;
 
 public class CheckoutSteps {
+    int bananaPrice = 0;
     @Given("the price of a {string} is {int}c")
-    public void thePriceOfAIs40c(String name, Integer price) throws Throwable {
-        int bananaPrice = price;
+    public void thePriceOfAIsC(String name, Integer price) throws Throwable {
+        bananaPrice = price;
     }
 
     @When("I checkout {int} {string}")
