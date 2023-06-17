@@ -10,9 +10,9 @@ public class CheckoutSteps {
     }
 
     @When("I checkout {int} {string}")
-    public void iCheckout(Integer int1, String string) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    public void iCheckout(Integer itemCount, String itemName) throws Throwable {
+        Checkout checkout = new Checkout();
+        checkout.add(itemCount, bananaPrice);
     }
 
     @Then("the total price should be 40c")
