@@ -1,12 +1,18 @@
 package implementation;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Catalog {
-    int itemPrice;
+    Map<String, Integer> itemCatalog;
+    public Catalog(){
+        itemCatalog = new HashMap<>();
+    }
     public void add(String itemName, int itemPrice){
-        this.itemPrice = itemPrice;
+        itemCatalog.put(itemName, itemPrice);
     }
 
     public int getPrice(String itemName){
-        return itemPrice;
+        return itemCatalog.get(itemName);
     }
 }
