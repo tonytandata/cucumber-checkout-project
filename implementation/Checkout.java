@@ -6,7 +6,7 @@ public class Checkout {
         runningTotal += (count * price);
     }
 
-    public Integer total(){
+    public int total(){
         return runningTotal;
     }
 }
